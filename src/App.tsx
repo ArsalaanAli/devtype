@@ -1,13 +1,17 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import TypeArea from "./TypeArea";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const keyDownEvent = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    console.log(event.code);
+  };
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div>
+      <div className="container" onKeyDown={keyDownEvent} tabIndex={0}>
+        Yello
+      </div>
     </div>
   );
 }
