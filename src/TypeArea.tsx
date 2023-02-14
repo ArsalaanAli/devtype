@@ -1,16 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 function TypeArea() {
-  function KeyDownEvent(event: React.KeyboardEvent<HTMLDivElement>) {
-    console.log(event.code);
-  }
+  const [typingText, setTypingText] = useState(
+    "The quick brown fox jumps over the lazy dog"
+  );
+
   return (
-    <div
-      onKeyDown={() => {
-        console.log("asd");
-      }}
-    >
-      Type Here
+    <div>
+      <h1 className="flex items-center justify-center h-96">{typingText}</h1>
     </div>
   );
 }
